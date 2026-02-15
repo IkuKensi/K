@@ -46,20 +46,42 @@ body {
 }
 
 .top-nav a {
+  position: relative;  /* ★ 用于方块 */
   text-decoration: none;
   color: #8f8f8f;
   letter-spacing: 0.5px;
+  padding-bottom: 8px; /* 给方块留空间 */
 }
 
+/* 顶部导航悬停 */
 .top-nav a:hover {
   color: #111;
 }
 
+/* 当前页文字高亮 */
 .top-nav .current {
   color: #7a7a7a;
   font-weight: 400;
   letter-spacing: 0.3px;
   pointer-events: none;
+}
+
+/* ===== 顶部导航小方块 ===== */
+.top-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 4px;
+  background-color: #ececec;  /* 默认浅灰 */
+  border-radius: 2px;         /* 圆角 */
+}
+
+/* 当前页方块颜色 */
+.top-nav a.current::after {
+  background-color: #111;    /* 当前页深色 */
 }
 
 /* ===== 分割线 ===== */
@@ -76,16 +98,10 @@ body {
 .f14, .f13 { letter-spacing: 0.3px; }
 
 /* 黑色强调 */
-.black {
-  color: #111111;
-  font-weight: 230;
-}
+.black { color: #111111; font-weight: 230; }
 
 /* ===== 前半部分信息组 ===== */
-.info-group {
-  line-height: 2.5;
-  margin-bottom: 42px;
-}
+.info-group { line-height: 2.5; margin-bottom: 42px; }
 .right { text-align: right; }
 
 /* ===== section ===== */
@@ -100,43 +116,27 @@ body {
 .paragraph { font-size: 11px; line-height: 2.1; margin-bottom: 10px; letter-spacing: 0.3px; }
 
 /* ===== 底部导航 ===== */
-.nav {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 60px;
-  font-size: 11px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #8f8f8f;
-}
-
-.nav a:hover {
-  color: #111;
-}
+.nav { display: flex; justify-content: space-around; margin-top: 60px; font-size: 11px; }
+.nav a { text-decoration: none; color: #8f8f8f; }
+.nav a:hover { color: #111; }
 
 .spacer { height: 20px; }
 
 /* ===== 黑夜模式跟随系统 ===== */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #111111;
-    color: #cfcfcf;
-  }
-
+  body { background: #111111; color: #cfcfcf; }
   .black { color: #ffffff; }
-
   .divider { background: #333333; }
-
   .top-nav a,
   .nav a { color: #cfcfcf; }
-
   .top-nav a:hover,
   .nav a:hover { color: #ffffff; }
-
   .top-nav .current { color: #aaaaaa; }
+  /* 小方块反色 */
+  .top-nav a::after { background-color: #555555; }
+  .top-nav a.current::after { background-color: #ffffff; }
 }
+
 </style>
 </head>
 
