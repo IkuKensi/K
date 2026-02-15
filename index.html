@@ -137,15 +137,40 @@ body {
   .top-nav a.current::after { background-color: #ffffff; }
 }
 
-.pure-img {
-  display: block;
-  width: 35px;          /* 图片大小 */
-  margin: 40px auto;     /* 居中，不压字 */
-  pointer-events: none; /* ★ 关键：完全不可点击 */
-  user-select: none;    /* 不可选中 */
-  opacity: 0.8;
+/* 外层：作为图片背景容器 */
+.img-bg-wrap {
+  position: relative;
+  width: 260px;      /* 控制整体宽度，可调 */
+  margin: 40px auto; /* 整体居中 */
 }
 
+/* 图片本身 */
+.img-bg-wrap img {
+  width: 100%;
+  display: block;
+  opacity: 0.85;          /* 背景感 */
+  pointer-events: none;   /* 不可点击 */
+  user-select: none;      /* 不可选中 */
+}
+
+/* 浮在图片上的文字层 */
+.info-text {
+  position: absolute;
+  inset: 0;               /* 等价 top:0 right:0 bottom:0 left:0 */
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #000;
+  pointer-events: none;   /* 不挡点击 */
+}
+
+/* 右侧对齐（你原本就有 right 的话可以保留） */
+.info-text .right {
+  text-align: right;
+}
 </style>
 </head>
 
@@ -164,26 +189,24 @@ body {
 </div>
   
 <!-- 基础信息 -->
-<div class="info-group">
-  <div class="f14">郁谦止T</div>
-  <div class="f13">05年射手 | ENTP | 非单</div>
+<div class="img-bg-wrap">
+  <img src="shouye1.PNG" alt="">
+
+  <div class="info-text">
+    <div>郁谦止T</div>
+    <div>05年射手 | ENTP | 非单</div>
+    <div>建模音乐会鸟</div>
+    <div>身高1.2 | 指定建模+3</div>
+    <div>所在团</div>
+    <div>信纸 | 光年外</div>
+
+    <div class="info-group right">
+      <div class="f14">左位白话</div>
+      <div class="f13">直球选手 | 不擦会死</div>
+    </div>
+  </div>
 </div>
 
-<div class="info-group right">
-  <div class="f14">建模音乐会鸟</div>
-  <div class="f13">身高1.2 | 指定建模+3</div>
-</div>
-
-<div class="info-group">
-  <div class="f14">所在团</div>
-  <div class="f13">信纸 | 光年外</div>
-</div>
-
-<div class="info-group right">
-  <div class="f14">左位白话</div>
-  <div class="f13">直球选手 | 不擦会死</div>
-</div>
-<img src="shouye1.PNG" class="info-img" alt="">
 <div class="divider"></div>
 
 <!-- 风格区 -->
