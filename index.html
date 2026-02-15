@@ -15,13 +15,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
                "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #8f8f8f;
-  font-weight: 300;   /* ★ 核心：整体变细 */
+  font-weight: 300;   /* ★ 整体变细 */
 }
 
 .container {
   max-width: 420px;
   margin: 0 auto;
-  padding: 48px 22px 80px; /* ↑ 顶部多留一点空间 */
+  padding: 48px 22px 80px;
   position: relative;     /* ★ 关键 */
 }
 
@@ -30,8 +30,8 @@ body {
   position: absolute;
   top: 18px;
   left: 18px;
-  font-size: 10.5px;
-  letter-spacing: 2px; /* 字间距：冷感来源 */
+  font-size: 9.5px;      /* 缩小 */
+  letter-spacing: 2px;
   color: #9a9a9a;
   font-weight: 300;
 }
@@ -41,7 +41,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 22px;
-  font-size: 12px;
+  font-size: 11px;        /* 缩小 */
   margin-bottom: 30px;
 }
 
@@ -57,10 +57,10 @@ body {
 
 /* ===== 当前页（极弱高亮） ===== */
 .top-nav .current {
-  color: #7a7a7a;      /* 比默认灰深一点点 */
-  font-weight: 400;    /* 比整体 300 稍重 */
-  letter-spacing: 0.3px; /* 比其他项略紧 */
-  pointer-events: none;  /* 当前页不可点（可选） */
+  color: #7a7a7a;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  pointer-events: none;
 }
 
 /* ===== 分割线 ===== */
@@ -70,10 +70,10 @@ body {
   margin: 36px 0;
 }
 
-/* ===== 字号系统（整体缩小1px） ===== */
-.f14 { font-size: 13px; }
-.f13 { font-size: 12px; }
-.f12 { font-size: 11px; }
+/* ===== 字号系统（全缩小1px） ===== */
+.f14 { font-size: 12px; }
+.f13 { font-size: 11px; }
+.f12 { font-size: 10px; }
 
 /* 字距微调 */
 .f14, .f13 {
@@ -83,13 +83,13 @@ body {
 /* 黑色强调 */
 .black {
   color: #111111;
-  font-weight: 230; /* 不要太粗，保持克制 */
+  font-weight: 230;
 }
 
 /* ===== 前半部分信息组 ===== */
 .info-group {
-  line-height: 2.5;      /* 放大呼吸感 */
-  margin-bottom: 42px;   /* 组间距增大 */
+  line-height: 2.5;
+  margin-bottom: 42px;
 }
 
 .right {
@@ -102,7 +102,7 @@ body {
 }
 
 .section-title {
-  font-size: 13px;  /* 原14 → 13 */
+  font-size: 12px;  /* 缩小 */
   margin-bottom: 14px;
   letter-spacing: 0.5px;
 }
@@ -117,20 +117,20 @@ body {
   margin-bottom: 30px;
 }
 
-/* ===== 正文段落（须知区保持舒服） ===== */
+/* ===== 正文段落（须知区） ===== */
 .paragraph {
-  font-size: 12px;   /* 原13 → 12 */
+  font-size: 11px;   /* 缩小 */
   line-height: 2.1;
   margin-bottom: 10px;
   letter-spacing: 0.3px;
 }
 
-/* ===== 顶部导航 ===== */
+/* ===== 底部导航（可删也可留） ===== */
 .nav {
   display: flex;
   justify-content: space-around;
   margin-top: 60px;
-  font-size: 12px;
+  font-size: 11px;   /* 缩小 */
 }
 
 .nav a {
@@ -141,7 +141,6 @@ body {
 .nav a:hover {
   color: #111;
 }
-
 </style>
 </head>
 
