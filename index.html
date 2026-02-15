@@ -113,7 +113,16 @@ body {
 .style-center .info-group { line-height: 2.6; margin-bottom: 30px; }
 
 /* ===== 正文段落（须知区） ===== */
-.paragraph { font-size: 11px; line-height: 2.1; margin-bottom: 10px; letter-spacing: 0.3px; }
+.paragraph {
+  font-size: 11px;
+  line-height: 2.1;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+
+  /* ✅ 修复须知文字太靠边问题 */
+  padding: 0 12px;          /* 左右内边距 */
+  text-align: left;          /* 保持左对齐 */
+}
 
 /* ===== 底部导航 ===== */
 .nav { display: flex; justify-content: space-around; margin-top: 60px; font-size: 11px; }
@@ -161,16 +170,21 @@ body {
 
 /* 文字浮在图片上 */
 .text-overlay {
-  position: relative;     /* 文字相对定位，浮在图片上 */
-  z-index: 2;             /* 高于图片 */
-  padding: 20px 20px 0px;     /* 上 左右 下内边距改小一点 */
-  color: inherit;         /* ★继承 body 的颜色，支持黑夜模式 */
-  line-height: 2.8;       /* ↑ 改大行距，让文字更松散 */
+  position: relative;     
+  z-index: 2;             
+  padding: 20px 20px 0px; 
+  color: inherit;         
+  line-height: 2.8;       
 }
 .text-overlay .f14,
 .text-overlay .f13,
 .text-overlay .black {
-  color: inherit;         /* 确保文字跟随全局颜色 */
+  color: inherit;          /* 确保文字跟随全局颜色 */
+}
+
+/* ===== 单独调整 “直球选手 | 不擦会死” 下边距 ===== */
+.text-overlay .f13.right:last-of-type {
+  margin-bottom: 10px;     /* 缩短与下面分割线的距离 */
 }
 </style>
 </head>
@@ -196,24 +210,23 @@ body {
   <div class="text-overlay">
     <div class="spacer"></div>
     <div class="spacer"></div>
-  <div class="f14">郁谦止T</div>
-  <div class="f13">05年射手 | ENTP | 非单</div>
+    <div class="f14">郁谦止T</div>
+    <div class="f13">05年射手 | ENTP | 非单</div>
 
-  <div class="spacer"></div>
+    <div class="spacer"></div>
 
-  <div class="f14 right">建模音乐会鸟</div>
-  <div class="f13 right">身高1.2 | 指定建模+3</div>
+    <div class="f14 right">建模音乐会鸟</div>
+    <div class="f13 right">身高1.2 | 指定建模+3</div>
 
-  <div class="spacer"></div>
+    <div class="spacer"></div>
 
-  <div class="f14">所在团</div>
-  <div class="f13">信纸 | 光年外</div>
+    <div class="f14">所在团</div>
+    <div class="f13">信纸 | 光年外</div>
 
-  <div class="spacer"></div>
+    <div class="spacer"></div>
 
-  <div class="f14 right">左位白话</div>
-  <div class="f13 right">直球选手 | 不擦会死</div>
-    </div>
+    <div class="f14 right">左位白话</div>
+    <div class="f13 right">直球选手 | 不擦会死</div>
   </div>
 </div>
 
