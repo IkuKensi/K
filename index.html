@@ -138,23 +138,22 @@ body {
   .top-nav .current { color: #aaaaaa; }
 }
 
-/* ===== 顶部导航下方三个浅灰色圆角方块 ===== */
-.top-blocks {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0 40px; /* 上下间距可调整 */
-  gap: 12px;
+/* 顶部导航下方小方块装饰 */
+.top-nav a {
+  position: relative;      /* 必须相对定位，方便放伪元素 */
+  padding-bottom: 8px;     /* 给方块腾出空间 */
 }
 
-.block-item {
-  flex: 1; /* 三个方块等宽 */
-  background-color: #ececec; /* 浅灰背景 */
-  border-radius: 10px;       /* 圆角 */
-  padding: 16px;
-  text-align: center;
-  font-size: 11px;
-  color: #555555;
-  box-sizing: border-box;
+.top-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;               /* 方块紧贴文字底部 */
+  transform: translateX(-50%);
+  width: 12px;             /* 方块宽度 */
+  height: 4px;             /* 方块高度 */
+  background-color: #ececec; /* 浅灰色 */
+  border-radius: 2px;      /* 圆角 */
 }
 </style>
 </head>
