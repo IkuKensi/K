@@ -11,11 +11,11 @@
 body {
   margin: 0;
   padding: 0;
+  background: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
                "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  background: #ffffff;
   color: #8f8f8f;
+  font-weight: 300;
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
   position: relative;
 }
 
-/* ===== 左上角小标题 ===== */
+/* ===== 左上角小标题（资料角标） ===== */
 .corner-title {
   position: absolute;
   top: 18px;
@@ -85,37 +85,21 @@ body {
 .info-group {
   line-height: 2.5;
   margin-bottom: 42px;
-  padding: 0 8px; /* 避免贴边 */
 }
-
 .right { text-align: right; }
 
 /* ===== section ===== */
 .section { margin-bottom: 40px; }
-
-.section-title {
-  font-size: 12px;
-  margin-bottom: 14px;
-  letter-spacing: 0.5px;
-}
+.section-title { font-size: 12px; margin-bottom: 14px; letter-spacing: 0.5px; }
 
 /* ===== 风格区整体居中 ===== */
 .style-center { text-align: center; }
-
-.style-center .info-group {
-  line-height: 2.6;
-  margin-bottom: 30px;
-}
+.style-center .info-group { line-height: 2.6; margin-bottom: 30px; }
 
 /* ===== 正文段落（须知区） ===== */
-.paragraph {
-  font-size: 11px;
-  line-height: 2.1;
-  margin-bottom: 10px;
-  letter-spacing: 0.3px;
-}
+.paragraph { font-size: 11px; line-height: 2.1; margin-bottom: 10px; letter-spacing: 0.3px; }
 
-/* ===== 顶部/底部导航 ===== */
+/* ===== 底部导航 ===== */
 .nav {
   display: flex;
   justify-content: space-around;
@@ -132,29 +116,37 @@ body {
   color: #111;
 }
 
-/* ===== 空行 ===== */
 .spacer { height: 20px; }
 
 /* ===== 黑夜模式跟随系统 ===== */
 @media (prefers-color-scheme: dark) {
-  body { background: #111111; color: #cfcfcf; }
+  body {
+    background: #111111;
+    color: #cfcfcf;
+  }
+
   .black { color: #ffffff; }
+
   .divider { background: #333333; }
+
   .top-nav a,
   .nav a { color: #cfcfcf; }
+
   .top-nav a:hover,
   .nav a:hover { color: #ffffff; }
+
   .top-nav .current { color: #aaaaaa; }
 }
+
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<!-- 左上角小标题 -->
-<div class="corner-title">// 郁谦止·虚恋须知</div>
+<div class="corner-title">// 郁谦止·虚恋资料</div>
+
+<div class="divider"></div>
 
 <!-- 顶部导航 -->
 <div class="top-nav">
@@ -162,8 +154,6 @@ body {
   <a href="huashu.html">话术</a>
   <a href="banping.html">板评</a>
 </div>
-
-<div class="divider"></div>
 
 <!-- 基础信息 -->
 <div class="info-group">
@@ -192,7 +182,6 @@ body {
 
 <!-- 风格区 -->
 <div class="style-center">
-
   <div class="section">
     <div class="section-title"><span class="black">主</span>风格</div>
     <div class="info-group">
@@ -216,7 +205,6 @@ body {
       <div class="f13">想扇我吗 快点好不好 等不及了</div>
     </div>
   </div>
-
 </div>
 
 <div class="divider"></div>
@@ -226,6 +214,7 @@ body {
 
 <div class="paragraph">le不接男板</div>
 <div class="paragraph">婉拒年龄未满16</div>
+
 <br>
 
 <div class="paragraph">开始前 辛苦告知我称呼&喜雷</div>
@@ -233,6 +222,7 @@ body {
 <div class="paragraph">单内言行无关单外 单外请不要传我</div>
 <div class="paragraph">不用等我打完字再回话 可以随时开口</div>
 <div class="paragraph">存单请注意约定时间 迟到十分钟下次再约</div>
+
 <br>
 
 <div class="paragraph">单内默认叫名字 爱叫你女朋友/老婆</div>
@@ -241,6 +231,7 @@ body {
 <div class="paragraph">单内小概率含有涉三 反感请标注</div>
 <div class="paragraph">恋爱两个人谈 需要回应保持状态</div>
 <div class="paragraph">风格受回话影响 喜欢你会掉落版头</div>
+
 <br>
 
 <div class="paragraph">旁观请至少保持十个身位的距离</div>
