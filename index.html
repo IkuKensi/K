@@ -137,6 +137,13 @@ body {
   .top-nav a.current::after { background-color: #ffffff; }
 }
 
+.pure-img {
+  display: block;
+  width: 120px;          /* 图片大小 */
+  margin: 40px auto;     /* 居中，不压字 */
+  pointer-events: none; /* ★ 关键：完全不可点击 */
+  user-select: none;    /* 不可选中 */
+}
 </style>
 </head>
 
@@ -154,6 +161,8 @@ body {
   <a href="banping.html">板评</a>
 </div>
 
+<img src="shouye1.png" class="pure-img" alt="">
+  
 <!-- 基础信息 -->
 <div class="info-group">
   <div class="spacer"></div>
