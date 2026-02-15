@@ -137,24 +137,6 @@ body {
 
   .top-nav .current { color: #aaaaaa; }
 }
-
-/* 顶部导航下方小方块装饰 */
-.top-nav a {
-  position: relative;      /* 必须相对定位，方便放伪元素 */
-  padding-bottom: 8px;     /* 给方块腾出空间 */
-}
-
-.top-nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;               /* 方块紧贴文字底部 */
-  transform: translateX(-50%);
-  width: 12px;             /* 方块宽度 */
-  height: 4px;             /* 方块高度 */
-  background-color: #ececec; /* 浅灰色 */
-  border-radius: 2px;      /* 圆角 */
-}
 </style>
 </head>
 
@@ -170,13 +152,6 @@ body {
   <a href="index.html" class="current">首页</a>
   <a href="huashu.html">话术</a>
   <a href="banping.html">板评</a>
-</div>
-
-<!-- 页面导航下方方块 -->
-<div class="top-blocks">
-  <div class="block-item">首页方块</div>
-  <div class="block-item">话术方块</div>
-  <div class="block-item">板评方块</div>
 </div>
 
 <!-- 基础信息 -->
