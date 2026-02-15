@@ -138,6 +138,24 @@ body {
   .top-nav .current { color: #aaaaaa; }
 }
 
+/* ===== 顶部导航下方三个浅灰色圆角方块 ===== */
+.top-blocks {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 40px; /* 上下间距可调整 */
+  gap: 12px;
+}
+
+.block-item {
+  flex: 1; /* 三个方块等宽 */
+  background-color: #ececec; /* 浅灰背景 */
+  border-radius: 10px;       /* 圆角 */
+  padding: 16px;
+  text-align: center;
+  font-size: 11px;
+  color: #555555;
+  box-sizing: border-box;
+}
 </style>
 </head>
 
@@ -153,6 +171,13 @@ body {
   <a href="index.html" class="current">首页</a>
   <a href="huashu.html">话术</a>
   <a href="banping.html">板评</a>
+</div>
+
+<!-- 页面导航下方方块 -->
+<div class="top-blocks">
+  <div class="block-item">首页方块</div>
+  <div class="block-item">话术方块</div>
+  <div class="block-item">板评方块</div>
 </div>
 
 <!-- 基础信息 -->
